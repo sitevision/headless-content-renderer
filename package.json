@@ -6,7 +6,9 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "build": "webpack --mode production",
+    "build": "yarn build:esm && yarn build:cjs",
+    "build:cjs": "tsc --module commonjs --outDir dist/cjs",
+    "build:esm": "tsc --module esnext",
     "test": "cypress run --component",
     "test:watch": "cypress open --component"
   },
