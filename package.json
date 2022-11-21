@@ -19,7 +19,6 @@
     "build:cjs": "tsc --module commonjs --outDir dist/cjs",
     "build:esm": "tsc",
     "clean": "rimraf dist",
-    "publish-to-npm": "npm publish ./dist --access public",
     "test": "cypress run --component",
     "test:watch": "cypress open --component"
   },
