@@ -1,0 +1,5 @@
+.github
+cypress
+**/*.test.tsx
+cypress.config.ts
+webpack.config.cjs

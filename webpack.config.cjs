@@ -16,14 +16,6 @@ module.exports = {
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
   },
-  // externals: {
-  //   react: {
-  //     module: 'react',
-  //     commonjs: 'react',
-  //     amd: 'react',
-  //     root: 'React',
-  //   },
-  // },
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
