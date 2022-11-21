@@ -4,6 +4,10 @@
   "author": "Sitevision AB",
   "license": "MIT",
   "type": "module",
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/sitevision/headless-content-renderer.git"
+  },
   "exports": {
     ".": {
       "import": "./dist/index.js",
@@ -22,7 +26,7 @@
     "react": "^18.2.0",
     "typescript": "^4.9.3"
   },
-  "peerDepenedencies": {
+  "peerDependencies": {
     "react": "17 | 18"
   },
   "devDependencies": {
