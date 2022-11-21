@@ -16,8 +16,13 @@ export interface TextProps extends IContentNode {
   };
 }
 
-const renderTextNodes = (textNodes: ITextNode[], baseUrl: string) => {
-  return textNodes.map((textNode) => {
+const renderTextNodes = (
+  textNodes: ITextNode[],
+  baseUrl: string,
+  key = 'textNode'
+) => {
+  return textNodes.map((textNode, i) => {
+    const id = `${key}-${i}`;
     const { type } = textNode;
     switch (type) {
       case 'text':
@@ -25,12 +30,23 @@ const renderTextNodes = (textNodes: ITextNode[], baseUrl: string) => {
       case 'inline':
       case 'block': {
         const { htmlName: Tag, children, attributes } = textNode;
+        const clonedAttributes = { ...attributes };
+
+        if (
+          Tag === 'a' &&
+          clonedAttributes.href &&
+          /^\//.test(clonedAttributes.href as string)
+        ) {
+          clonedAttributes.href = baseUrl + clonedAttributes.href;
+        }
+
         return (
           <Tag
-            {...attributes}
+            key={id}
+            {...clonedAttributes}
             className={type === 'block' ? 'env-text' : undefined}
           >
-            {renderTextNodes(children, baseUrl)}
+            {renderTextNodes(children, baseUrl, id)}
           </Tag>
         );
       }

@@ -180,12 +180,25 @@
                 "type": "inline",
                 "htmlName": "a",
                 "attributes": {
-                  "href": "https://www.sitervision.se"
+                  "href": "https://www.sitevision.se"
                 },
                 "children": [
                   {
                     "type": "text",
-                    "content": "groda"
+                    "content": "external "
+                  }
+                ]
+              },
+              {
+                "type": "inline",
+                "htmlName": "a",
+                "attributes": {
+                  "href": "/internallink"
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "content": " internal"
                   }
                 ]
               },
