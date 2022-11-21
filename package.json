@@ -1,10 +1,15 @@
 {
-  "name": "@sitevision/content-node-renderer",
+  "name": "@sitevision/headless-content-renderer",
   "version": "0.0.1",
-  "main": "index.js",
   "author": "Sitevision AB",
   "license": "MIT",
   "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/cjs/index.js"
+    }
+  },
   "scripts": {
     "build": "yarn build:esm && yarn build:cjs",
     "build:cjs": "tsc --module commonjs --outDir dist/cjs",
@@ -22,6 +27,7 @@
   },
   "devDependencies": {
     "@testing-library/cypress": "^8.0.7",
+    "@types/mocha": "^10.0.0",
     "@typescript-eslint/eslint-plugin": "^5.43.0",
     "@typescript-eslint/parser": "^5.43.0",
     "cypress": "^11.1.0",

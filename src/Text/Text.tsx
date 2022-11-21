@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ContentNodeProps } from '../ContentNodeRenderer';
+import { IContentNode } from '../HeadlessContentRenderer';
 
 export interface ITextNode {
   type: string;
@@ -9,7 +9,7 @@ export interface ITextNode {
   children?: ITextNode[];
 }
 
-export interface TextProps extends ContentNodeProps {
+export interface TextProps extends IContentNode {
   baseUrl: string;
   properties: {
     textContent: ITextNode[];

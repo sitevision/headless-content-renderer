@@ -1,12 +1,12 @@
 import * as React from 'react';
-import { ContentNodeProps } from '../ContentNodeRenderer';
+import { IContentNode } from '../HeadlessContentRenderer';
 import ImageNode from './Image';
 
 describe('<ImageNode />', () => {
   it('should render without throwing an error', () => {
     cy.fixture('contentNodes.json').then(({ contentNodes }) => {
       const imageNode = contentNodes.find(
-        ({ type }: ContentNodeProps) => type === 'image'
+        ({ type }: IContentNode) => type === 'image'
       );
       cy.mount(<ImageNode {...imageNode} />);
 

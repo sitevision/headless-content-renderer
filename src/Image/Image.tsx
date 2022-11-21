@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ContentNodeProps } from '../ContentNodeRenderer';
+import { IContentNode } from '../HeadlessContentRenderer';
 
 export interface IImage {
   id: string;
@@ -8,7 +8,7 @@ export interface IImage {
   URI: string;
 }
 
-export interface ImageProps extends ContentNodeProps {
+export interface ImageProps extends IContentNode {
   properties: {
     image: IImage;
   };

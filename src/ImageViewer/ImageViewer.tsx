@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { ContentNodeProps } from '../ContentNodeRenderer';
+import { IContentNode } from '../HeadlessContentRenderer';
 import { IImage } from '../Image';
 
-export interface ImageViewerProps extends ContentNodeProps {
+export interface ImageViewerProps extends IContentNode {
   properties: {
     images: IImage[];
   };

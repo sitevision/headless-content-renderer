@@ -1,1 +1,1 @@
-export { default as ContentNodeRenderer } from './ContentNodeRenderer';
+export { default as HeadlessContentRenderer } from './HeadlessContentRenderer';

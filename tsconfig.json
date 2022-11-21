@@ -11,5 +11,5 @@
     "types": ["cypress", "@testing-library/cypress"]
   },
   "include": ["src"],
-  "exclude": ["node_modules", "build", "dist", "cypress", "**/*.test.tsx"]
+  "exclude": ["node_modules", "dist", "**/*.test.tsx"]
 }

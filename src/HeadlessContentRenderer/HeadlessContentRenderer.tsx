@@ -3,19 +3,19 @@ import Image, { ImageProps } from '../Image';
 import ImageViewer, { ImageViewerProps } from '../ImageViewer';
 import Text, { TextProps } from '../Text';
 
-export interface ContentNodeProps {
+export interface IContentNode {
   type: string;
   properties: Record<string, unknown>;
 }
 
-export interface ContentNodeRendererProps {
-  contentNodes: ContentNodeProps[];
+export interface HeadlessContentRenderer {
+  contentNodes: IContentNode[];
   baseUrl: string;
 }
 
-const ContentNodeRenderer: React.FunctionComponent<
-  ContentNodeRendererProps
-> = ({ contentNodes, baseUrl }: ContentNodeRendererProps) => {
+const HeadlessContentRenderer: React.FunctionComponent<
+  HeadlessContentRenderer
+> = ({ contentNodes, baseUrl }: HeadlessContentRenderer) => {
   return (
     <>
       {contentNodes.map((contentNode) => {
@@ -33,4 +33,4 @@ const ContentNodeRenderer: React.FunctionComponent<
   );
 };
 
-export default ContentNodeRenderer;
+export default HeadlessContentRenderer;
