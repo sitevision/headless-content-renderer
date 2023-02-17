@@ -28,7 +28,7 @@ const ImageViewer: React.FunctionComponent<ImageViewerProps> = ({
       <ol className="env-image-viewer__thumbnails">
         {images.slice(1).map((image) => (
           <li key={image.id}>
-            <a className="env-image-viewer__images" href={firstImage.URL}>
+            <a className="env-image-viewer__images" href={image.URL}>
               <img
                 className="env-image-viewer__img"
                 src={image.URL}
