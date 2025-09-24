@@ -27,6 +27,8 @@ const HeadlessContentRenderer: React.FunctionComponent<
           case 'images':
           case 'imageslideshow':
             return <ImageViewer {...(contentNode as ImageViewerProps)} />;
+          default:
+            return null;
         }
       })}
     </>
