@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { createYield } from 'typescript';
 import TextContent from './Text';
 
 describe('<TextContent />', () => {
@@ -11,13 +10,13 @@ describe('<TextContent />', () => {
       cy.findByRole('link', { name: 'internal' }).should(
         'have.attr',
         'href',
-        'https://example.com/internallink'
+        'https://example.com/internallink',
       );
 
       cy.findByRole('link', { name: 'external' }).should(
         'have.attr',
         'href',
-        'https://www.sitevision.se'
+        'https://www.sitevision.se',
       );
     });
   });

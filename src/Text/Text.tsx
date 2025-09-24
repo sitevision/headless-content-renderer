@@ -19,7 +19,7 @@ export interface TextProps extends IContentNode {
 const renderTextNodes = (
   textNodes: ITextNode[],
   baseUrl: string,
-  key = 'textNode'
+  key = 'textNode',
 ) => {
   return textNodes.map((textNode, i) => {
     const id = `${key}-${i}`;
@@ -50,6 +50,8 @@ const renderTextNodes = (
           </Tag>
         );
       }
+      default:
+        return null;
     }
   });
 };
